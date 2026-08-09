@@ -21,4 +21,5 @@ exports.HomePage = class HomePage{
      async gotoCart() {
         await this.page.locator(this.Cart).click();
        }
+       
 }
