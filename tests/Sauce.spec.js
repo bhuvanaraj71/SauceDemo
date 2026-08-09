@@ -4,6 +4,7 @@ import {LoginPage} from '../Pages/Login';
 import { HomePage } from '../Pages/HomePage';
 import { CartPage } from '../Pages/CartPage';
 import { CheckOutPage } from '../Pages/Checkout';
+import { OverviewPage } from '../Pages/Overview';
 
 test("Login", async({page})=>
 {
@@ -24,6 +25,10 @@ test("Login", async({page})=>
     const CheckOut = new CheckOutPage(page);
     await CheckOut.CheckOutPage('Bhuvi', 'B', '562135');
     await page.waitForTimeout(1000);
+
+    const overview = new OverviewPage(page);
+    await overview.finish();
+    await page.waitForTimeout(2000);
 
 })
 
